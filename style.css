@@ -1,0 +1,160 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #272727;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+/* Start for the styles of the header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+header div {
+    background-image: url('./assets/imgAssignment1/banner.jpg');
+    background-size: cover;
+    height: 80px;
+    width: 100%;
+}
+header div::before {/* before pseudoelment to add opacity to the background image without adding it to the elements inside */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 134, 93, 0.8);
+    z-index: -1;
+}
+#bannerContent {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    padding-top: 10px;
+}
+#bannerContent h2 {
+    margin-top: 0px;
+}
+/* start of the styles for the main content of the page */
+section{
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 100px;
+    color: #ffffff;
+}
+#mainContent {
+    display: flex; /* Flex-box to managge the layout of the page */
+    flex-direction: row;
+    width: 100%;
+}
+.mainContentPart {
+    flex: 1; /* Adding the flex instructions to the child elements in the flexbox */
+    padding: 20px;
+    font-size: 18px;
+    width: 100%;
+}
+
+#firstPart h3, #secondPart h4 {
+    text-align: center;
+}
+#firstPart img {
+    width: 18%;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+}
+p {
+    font-size: 16px;
+    text-align: center;
+}
+.linkStyle {
+    color: #2A865D;
+    text-decoration: none;
+}
+.linkStyle:hover {
+    text-decoration: underline;
+}
+.itemsList {
+    margin: 16px;
+    text-align: left;
+}
+footer {
+    padding-bottom: 100px;
+    text-align: center;
+    margin-top: 40px;
+}
+footer small {
+    text-align: center;
+    color: #2A865D;
+}
+nav {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    background-color: #2A865D;
+    margin: 0px;
+}
+.navItem {
+    flex: 1;
+    padding: 15px 10px;
+    font-size: 18px;
+    width: 100%;
+}
+.navItem p {
+    text-align: center;
+    margin: 0px;
+}
+.navItem p a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.navItem p a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 767px) {
+    section {
+        width: 100%;
+    }
+    #mainContent {
+        flex-direction: column;
+    }
+    #firstPart {
+        border-right: none;
+    }
+    nav {
+        max-width: 100%;
+    }
+    p {
+        text-align: center;
+    }
+    .bigText{
+        display: none;
+    }
+    .mainContentPart {
+        padding: 0px;
+    }
+    #firstPart img {
+        width: 48%;
+        border-radius: 50%;
+        margin: 10px auto;
+        display: block;
+    }
+}
+@media (min-width: 767px) {
+    .smallText {
+        display: none;
+    }
+}
